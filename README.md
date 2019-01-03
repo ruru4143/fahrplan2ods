@@ -22,6 +22,6 @@ or if you want to filter after: language, track, do_not_record, room.
 now you have a "talks_EVENTACRONYM_watchlist.ods"
 
 ### ToDo
-* build a clinterface
+* build a clinterface ~~~
 * build gui for filter options
 
