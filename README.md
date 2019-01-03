@@ -23,3 +23,4 @@ now you have a "talks_EVENTACRONYM_watchlist.ods"
 ### ToDo
 * add filter options
 * build gui for filter options
+* build cli
