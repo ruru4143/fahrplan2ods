@@ -34,8 +34,6 @@ then you get all English talk in Borg
 
 then you get all talks in Adams from CCC eg. Opening/Closing event
 
-now you have a "talks_EVENTACRONYM_watchlist.ods"
-
 ### ToDo
 * build a clinterface ~~~
 * build gui for filter options
