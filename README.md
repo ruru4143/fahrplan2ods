@@ -19,3 +19,7 @@ if you don't want the fahrplan from 35c3 change the json-url in fahrplan2ods.py
     ./fahrplan2ods.py
 
 now you have a "talks_EVENTACRONYM_watchlist.ods"
+
+### ToDo
+* add filter options
+* build gui for filter options
