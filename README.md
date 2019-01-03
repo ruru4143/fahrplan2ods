@@ -19,10 +19,10 @@ And it has filtering options!
 if you don't want the fahrplan from 35c3 change the json-url in fahrplan2ods.py
 or if you want to filter after: language, track, do_not_record, room.
 
-    usage: fahrplan2ods.py [--tracks [TRACKS [TRACKS ...]]]
-                           [--rooms [ROOMS [ROOMS ...]]]
-                           [--lang [LANG [LANG ...]]]
-                           [--do_not_record [DO_NOT_RECORD]]
+    usage: fahrplan2ods.py [--tracks [TRACKS [TRACKS ...]]] # eg CCC
+                           [--rooms [ROOMS [ROOMS ...]]] # eg Adams, Borg
+                           [--lang [LANG [LANG ...]]] # eg en, de
+                           [--do_not_record [DO_NOT_RECORD]] # eg yes, no
 
 
 now you have a "talks_EVENTACRONYM_watchlist.ods"
