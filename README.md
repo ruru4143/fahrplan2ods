@@ -17,13 +17,22 @@ And it has filtering options!
     cd fahrplan2ods
     
 if you don't want the fahrplan from 35c3 change the json-url in fahrplan2ods.py
-or if you want to filter after: language, track, do_not_record, room.
 
-    usage: fahrplan2ods.py [--tracks [TRACKS [TRACKS ...]]] # eg CCC
+    usage: ./fahrplan2ods.py [--tracks [TRACKS [TRACKS ...]]] # eg CCC
                            [--rooms [ROOMS [ROOMS ...]]] # eg Adams, Borg
                            [--lang [LANG [LANG ...]]] # eg en, de
                            [--do_not_record [DO_NOT_RECORD]] # eg yes, no
 
+#### Example params
+
+    ./fahrplan2ods.py --rooms Borg --lang en
+
+then you get all English talk in Borg
+    
+
+    ./fahrplan2ods.py --tracks CCC --rooms Adams
+
+then you get all talks in Adams from CCC eg. Opening/Closing event
 
 now you have a "talks_EVENTACRONYM_watchlist.ods"
 
