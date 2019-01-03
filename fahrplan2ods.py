@@ -1,9 +1,11 @@
 import requests
 import pyexcel
 
+
 def add_lists(list1, list2):
     for append_item in list2:
         list1.append(append_item)
+
 
 json_url = "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.json"
 
