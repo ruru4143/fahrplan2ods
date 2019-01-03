@@ -15,12 +15,13 @@ This is an little python script that downloads the fahrplan and generates a ods 
     cd fahrplan2ods
     
 if you don't want the fahrplan from 35c3 change the json-url in fahrplan2ods.py
-    
+or if you want to filter after: language, track, do_not_record, room.
+
     ./fahrplan2ods.py
 
 now you have a "talks_EVENTACRONYM_watchlist.ods"
 
 ### ToDo
-* add filter options
+* build a clinterface
 * build gui for filter options
-* build cli
+

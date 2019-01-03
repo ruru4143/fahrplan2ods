@@ -20,6 +20,12 @@ days = conference[u'days']
 acronym = conference[u'acronym'] # for the name
 name_of_the_output_file = "talks_" + acronym + "_watchlist.ods"
 
+# Filtering options: (if anything is empty, it doesn't filter)
+languages_f = [] # de / en
+rooms_f = []  # Adams, Borg usw...
+tracks_f = [] # CCC, Ethics, Society & Politics usw...
+do_not_record_f = None # True/False, off==None
+
 
 # gen talks list
 talks = []
@@ -29,10 +35,19 @@ for day_index in range(len(days)):
     rooms = days[day_index][u'rooms']
     first_time = True
     for room in rooms:
-        talk_index = rooms[room]
-        for talk in range(len(talk_index)):
-            title = talk_index[talk][u'title']
-            talks[day_index].append([title, "", ""])
+        if rooms_f == [] or room in rooms_f: # filter rooms
+
+            talk_index = rooms[room]
+            for talk in range(len(talk_index)):
+                track = talk_index[talk][u'track']
+                language = talk_index[talk][u'language']
+                do_not_record = talk_index[talk][u'do_not_record']
+
+                if tracks_f == [] or track in tracks_f:
+                    if languages_f == [] or language in languages_f:
+                        if do_not_record_f == None or do_not_record_f == do_not_record:
+                            title = talk_index[talk][u'title']
+                            talks[day_index].append([title, "", ""])
 
 # calc max days per day
 max_talks_per_day = 0
