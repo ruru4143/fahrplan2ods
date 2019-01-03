@@ -1,11 +1,50 @@
 import requests
 import pyexcel
+import argparse
 
 
 def add_lists(list1, list2):
     for append_item in list2:
         list1.append(append_item)
 
+
+parser = argparse.ArgumentParser(description='creat a list of talks with filteroptions')
+
+# argparse:
+parser = argparse.ArgumentParser(add_help=False)
+parser.add_argument('--tracks', type=str, nargs='*',
+                    help='filter the tracks, eg CCC')
+parser.add_argument('--rooms', type=str, nargs='*',
+                    help='filter the rooms, eg Adams')
+parser.add_argument('--lang', type=str, nargs='*',
+                    help='filter the language, eg de, en')
+parser.add_argument('--do_not_record', type=str, nargs='?',
+                    help='filter if its recorded eg "yes", "no')
+
+args = parser.parse_args()
+
+# Filtering options: (if anything is empty, it doesn't filter)
+if args.lang is None:
+    languages_f = []
+else:
+    languages_f = args.lang # de / en
+
+if args.tracks is None:
+    tracks_f = []
+else:
+    tracks_f = args.tracks # Adams, Borg ...
+
+if args.rooms is None:
+    rooms_f = []
+else:
+    rooms_f = args.rooms # CCC, Ethics, Society & Politics....
+
+if args.do_not_record is None:
+    do_not_record_f = None
+elif args.do_not_record.lower() == 'yes':
+    do_not_record_f = True # True/False, off==Non
+elif args.do_not_record.lower() == 'no':
+    do_not_record_f = False # True/False, off==Non
 
 json_url = "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.json"
 
@@ -20,11 +59,6 @@ days = conference[u'days']
 acronym = conference[u'acronym'] # for the name
 name_of_the_output_file = "talks_" + acronym + "_watchlist.ods"
 
-# Filtering options: (if anything is empty, it doesn't filter)
-languages_f = [] # de / en
-rooms_f = []  # Adams, Borg usw...
-tracks_f = [] # CCC, Ethics, Society & Politics usw...
-do_not_record_f = None # True/False, off==None
 
 
 # gen talks list
