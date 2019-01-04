@@ -30,7 +30,7 @@ if you want german non technical or scientific talks, this would be your setting
 
     ./fahrplan2ods.py --lang de --tracks "Ethics, Society & Politics" "Resilience" "Art & Culture" "Entertainment"
 
-if you don't know what options you can apply
+if you don't know what to do
     
     ./fahrplan2ods.py --get_options
 
