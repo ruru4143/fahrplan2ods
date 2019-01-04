@@ -40,6 +40,5 @@ if you want all talks from CCC in romm Adams:
 
 
 ### ToDo
-* build a clinterface ~~~
 * build gui for filter options
 
