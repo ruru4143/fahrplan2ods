@@ -22,11 +22,17 @@ if you don't want the fahrplan from 35c3 change the json-url in fahrplan2ods.py
                            [--rooms [ROOMS [ROOMS ...]]] # eg Adams, Borg
                            [--lang [LANG [LANG ...]]] # eg en, de
                            [--do_not_record [DO_NOT_RECORD]] # eg yes, no
+                           [--get_options]
+
 
 #### Example params
 if you want german non technical or scientific talks, this would be your settings:
 
     ./fahrplan2ods.py --lang de --tracks "Ethics, Society & Politics" "Resilience" "Art & Culture" "Entertainment"
+
+if you don't know what options you can apply
+    
+    ./fahrplan2ods.py --get_options
 
 if you want all talks from CCC in romm Adams:
 
