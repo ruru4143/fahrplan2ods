@@ -8,7 +8,7 @@ except:
     print("can't get url from fahrplan2ods.py")
 
 # or put in direkt
-# json_url = "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.json"
+json_url = "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.json"
 
 r = requests.get(json_url)
 
