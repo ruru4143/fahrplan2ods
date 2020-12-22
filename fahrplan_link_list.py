@@ -1,6 +1,8 @@
 # If you have more official fahrplan links, please send it to me.
 
 official = {
+    "rc3": "https://fahrplan.events.ccc.de/rc3/2020/Fahrplan/",
+    "36c3": "https://fahrplan.events.ccc.de/congress/2019/Fahrplan/schedule.json",
     "35c3": "https://fahrplan.events.ccc.de/congress/2018/Fahrplan/schedule.json",
     "34c3": "https://fahrplan.events.ccc.de/congress/2017/Fahrplan/schedule.json",
     "33c3": None,
