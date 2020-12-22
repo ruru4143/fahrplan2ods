@@ -40,7 +40,7 @@ if you want all talks from CCC in romm Adams:
 
 
 ### ToDo
-* build gui for filter options
+* build tui for interactive settings
 
 ### Wanted
 * if you know how to format and color ods files in Python, please make a pull request.
